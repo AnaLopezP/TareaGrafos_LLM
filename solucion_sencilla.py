@@ -43,7 +43,6 @@ nx.draw_networkx_labels(G, pos, font_size=12)
 edge_labels = nx.get_edge_attributes(G, 'relation')
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10)
 
-# Display the plot
 plt.axis('off')
 plt.show()
 chain = GraphQAChain.from_llm(OpenAI(temperature=0), graph=graph, verbose=True)

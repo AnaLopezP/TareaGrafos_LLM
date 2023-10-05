@@ -7,7 +7,17 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import os
 import openai
+#Pregunta que queremos hacer
+os.environ['OPENAI_API_KEY'] = "your-OpenAI-API-key"
+openai.api_key = os.environ['OPENAI_API_KEY']
 
+question = "When did apple announced the Vision Pro?"
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", 
+                                            temperature=0, 
+                                            messages=[{"role": "user",
+                                            "content": question}])
+
+print(completion["choices"][0]["message"]["content"])
 
 #Grafo complejo
 # Conocimientos que le vamos a dar a nuestro grafo
