@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import os
 import openai
 #Pregunta que queremos hacer
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = "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"
 openai.api_key = os.environ['OPENAI_API_KEY']
 
 question = "When did apple announced the Vision Pro?"
