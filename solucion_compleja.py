@@ -46,7 +46,8 @@ kg = [
     ('Vision Pro', 'announced in', '2023'),
 ]
 #Creamos el grafo
-graph = index_creator.from_text('')
+index_creator = GraphIndexCreator(llm=OpenAI(temperature=0))
+graph = index_creator.from_text(kg)
 for (node1, relation, node2) in kg:
     graph.add_triple(KnowledgeTriple(node1, relation, node2))
 
