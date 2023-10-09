@@ -9,7 +9,7 @@ import os
 import openai
 
 #Pregunta que queremos hacer
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = "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"
 openai.api_key = os.environ['OPENAI_API_KEY']
 
 question = "When did apple announced the Vision Pro?"
